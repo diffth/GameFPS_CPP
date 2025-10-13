@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GameFPS_CPP",
+			"Path": "..\\Source\\GameFPS_CPP.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GameFPS_CPPEditor",
+			"Path": "..\\Source\\GameFPS_CPPEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\UNREAL\\UNRealProjects\\GameFPS_CPP\\Source\\GameFPS_CPP\\GameFPS_CPP.Build.cs",
+		"E:\\UNREAL\\UNRealProjects\\GameFPS_CPP\\Source\\GameFPS_CPP.Target.cs",
+		"E:\\UNREAL\\UNRealProjects\\GameFPS_CPP\\Source\\GameFPS_CPPEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}
