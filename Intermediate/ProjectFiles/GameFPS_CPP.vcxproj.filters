@@ -11,6 +11,10 @@
     <None Include="..\..\Source\GameFPS_CPPEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -52,6 +56,18 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\GameFPS_CPP\GameFPS_CPPGameMode.h">
       <Filter>Source\GameFPS_CPP</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameFPS_CPP\Private">
+      <UniqueIdentifier>{3F895C35-5048-38AA-8AA5-B2B2BB42C99D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GameFPS_CPP\Private\Gameplay">
+      <UniqueIdentifier>{593AF1E2-45A9-3F28-977A-6A5F9AE404A4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gameplay\GameFPSPlayerController.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gameplay\GameFPSPlayerController.h">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
