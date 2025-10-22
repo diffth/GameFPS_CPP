@@ -1,0 +1,22 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/GamePlay/GunCharacter.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/GamePlay/GunGameModeBase.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/GamePlay/GunPlayerController.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/GamePlay/GunSaveGame.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/Gun/PSBullet.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/Gun/PSGun.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/Gun/PSLaserPointer.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/Target/GunTarget.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/Widget/PS_GameplayWidget.uasset",
+				"E:/UNREAL/UNRealProjects/GameFPS_CPP/Content/FPS_Gun/Widget/PS_ResultWidget.uasset"
+			]
+		}
+	]
+}
