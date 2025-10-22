@@ -63,11 +63,74 @@
     <Filter Include="Source\GameFPS_CPP\Private\Gameplay">
       <UniqueIdentifier>{593AF1E2-45A9-3F28-977A-6A5F9AE404A4}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gameplay\GameFPSPlayerController.cpp">
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterCharacter.cpp">
       <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gameplay\GameFPSPlayerController.h">
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterCharacter.h">
       <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterGameMode.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterGameMode.h">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterPlayerController.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterPlayerController.h">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterSaveGame.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gameplay\ShooterSaveGame.h">
+      <Filter>Source\GameFPS_CPP\Private\Gameplay</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameFPS_CPP\Private\Gun">
+      <UniqueIdentifier>{4CA51903-63B0-34F3-A0BE-7DFB57624A05}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gun\ShooterBullet.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gun</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gun\ShooterBullet.h">
+      <Filter>Source\GameFPS_CPP\Private\Gun</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gun\ShooterGun.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gun</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gun\ShooterGun.h">
+      <Filter>Source\GameFPS_CPP\Private\Gun</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Gun\ShooterLaserPointer.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Gun</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Gun\ShooterLaserPointer.h">
+      <Filter>Source\GameFPS_CPP\Private\Gun</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameFPS_CPP\Private\Target">
+      <UniqueIdentifier>{0C7CC5F5-B4A6-3DC8-8826-35B3A0FB0400}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Target\ShooterTarget.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Target</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Target\ShooterTarget.h">
+      <Filter>Source\GameFPS_CPP\Private\Target</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameFPS_CPP\Private\Widget">
+      <UniqueIdentifier>{5967841F-E2D5-3B1B-B1C6-3B1A4D785457}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Widget\ShooterGameplayWidget.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Widget</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Widget\ShooterGameplayWidget.h">
+      <Filter>Source\GameFPS_CPP\Private\Widget</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameFPS_CPP\Private\Widget\ShooterResultWidget.cpp">
+      <Filter>Source\GameFPS_CPP\Private\Widget</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Widget\ShooterResultWidget.h">
+      <Filter>Source\GameFPS_CPP\Private\Widget</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
