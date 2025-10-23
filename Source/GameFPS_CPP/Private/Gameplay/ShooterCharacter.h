@@ -28,17 +28,17 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(Category = Character, VisibleAnywhere)
 	TObjectPtr<USkeletalMeshComponent> ShadowBodyCPP;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(Category = Character, VisibleAnywhere)
 	TObjectPtr<UChildActorComponent> WeaponInBackCPP;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(Category = Character, VisibleAnywhere)
 	TObjectPtr<USkeletalMeshComponent> LowerBodyCPP;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(Category = Character, VisibleAnywhere)
 	TObjectPtr<UCameraComponent> CameraCPP;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(Category = Character, VisibleAnywhere)
 	TObjectPtr<USkeletalMeshComponent> FirstPersonCPP;
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(Category = Character, VisibleAnywhere)
 	TObjectPtr<UChildActorComponent> WeaponInHandCPP;
 
 
