@@ -9,11 +9,22 @@ AShooterCharacter::AShooterCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	ShadowBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ShadowBodyCPP"));
+	ShadowBodyCPP->SetupAttachment(RootComponent);
+
 	WeaponInBackCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInBackCPP"));
+	WeaponInBackCPP->SetupAttachment(ShadowBodyCPP);
+
 	LowerBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("LowerBodyCPP"));
+	LowerBodyCPP->SetupAttachment(RootComponent);
+
 	CameraCPP = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraCPP"));
+	CameraCPP->SetupAttachment(RootComponent);
+
 	FirstPersonCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonCPP"));
+	FirstPersonCPP->SetupAttachment(CameraCPP);
+
 	WeaponInHandCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInHandCPP"));
+	WeaponInHandCPP->SetupAttachment(FirstPersonCPP);
 }
 
 // Called when the game starts or when spawned
