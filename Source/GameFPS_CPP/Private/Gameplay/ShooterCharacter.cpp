@@ -8,7 +8,6 @@ AShooterCharacter::AShooterCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	/*
 	ShadowBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ShadowBodyCPP"));
 	ShadowBodyCPP->SetupAttachment(RootComponent);
 
@@ -26,7 +25,7 @@ AShooterCharacter::AShooterCharacter()
 
 	WeaponInHandCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInHandCPP"));
 	WeaponInHandCPP->SetupAttachment(FirstPersonCPP);
-	*/
+
 }
 
 // Called when the game starts or when spawned
