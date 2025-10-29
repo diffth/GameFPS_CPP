@@ -20,15 +20,19 @@ AShooterCharacter::AShooterCharacter()
 		}
 	}
 
-
 	LowerBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("LowerBodyCPP"));
 	LowerBodyCPP->SetupAttachment(RootComponent);
 
 	CameraCPP = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraCPP"));
-	CameraCPP->SetupAttachment(RootComponent);
-
-	FirstPersonCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonCPP"));
-	FirstPersonCPP->SetupAttachment(CameraCPP);
+	if (CameraCPP)
+	{
+		CameraCPP->SetupAttachment(RootComponent);
+		FirstPersonCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonCPP"));
+		if (FirstPersonCPP)
+		{
+			FirstPersonCPP->SetupAttachment(CameraCPP);
+		}
+	}
 
 	WeaponInHandCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInHandCPP"));
 	WeaponInHandCPP->SetupAttachment(FirstPersonCPP);
