@@ -9,10 +9,17 @@ AShooterCharacter::AShooterCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	ShadowBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ShadowBodyCPP"));
-	ShadowBodyCPP->SetupAttachment(RootComponent);
+	//Null üũ
+	if (ShadowBodyCPP)
+	{
+		ShadowBodyCPP->SetupAttachment(RootComponent);
+		WeaponInBackCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInBackCPP"));
+		if (WeaponInBackCPP)
+		{
+			WeaponInBackCPP->SetupAttachment(ShadowBodyCPP);
+		}
+	}
 
-	WeaponInBackCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInBackCPP"));
-	WeaponInBackCPP->SetupAttachment(ShadowBodyCPP);
 
 	LowerBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("LowerBodyCPP"));
 	LowerBodyCPP->SetupAttachment(RootComponent);
