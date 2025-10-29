@@ -19,7 +19,6 @@ AShooterCharacter::AShooterCharacter()
 			WeaponInBackCPP->SetupAttachment(ShadowBodyCPP);
 		}
 	}
-
 	LowerBodyCPP = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("LowerBodyCPP"));
 	LowerBodyCPP->SetupAttachment(RootComponent);
 
@@ -31,12 +30,13 @@ AShooterCharacter::AShooterCharacter()
 		if (FirstPersonCPP)
 		{
 			FirstPersonCPP->SetupAttachment(CameraCPP);
+			WeaponInHandCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInHandCPP"));
+			if (WeaponInHandCPP)
+			{
+				WeaponInHandCPP->SetupAttachment(FirstPersonCPP);
+			}
 		}
 	}
-
-	WeaponInHandCPP = CreateDefaultSubobject<UChildActorComponent>(TEXT("WeaponInHandCPP"));
-	WeaponInHandCPP->SetupAttachment(FirstPersonCPP);
-
 }
 
 // Called when the game starts or when spawned
