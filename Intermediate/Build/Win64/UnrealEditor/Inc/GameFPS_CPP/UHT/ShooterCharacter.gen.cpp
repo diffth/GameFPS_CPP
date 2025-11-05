@@ -15,8 +15,68 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	GAMEFPS_CPP_API UClass* Z_Construct_UClass_AShooterCharacter();
 	GAMEFPS_CPP_API UClass* Z_Construct_UClass_AShooterCharacter_NoRegister();
+	GAMEFPS_CPP_API UEnum* Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP();
 	UPackage* Z_Construct_UPackage__Script_GameFPS_CPP();
 // End Cross Module References
+	static FEnumRegistrationInfo Z_Registration_Info_UEnum_StateOfCharacterCPP;
+	static UEnum* StateOfCharacterCPP_StaticEnum()
+	{
+		if (!Z_Registration_Info_UEnum_StateOfCharacterCPP.OuterSingleton)
+		{
+			Z_Registration_Info_UEnum_StateOfCharacterCPP.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP, (UObject*)Z_Construct_UPackage__Script_GameFPS_CPP(), TEXT("StateOfCharacterCPP"));
+		}
+		return Z_Registration_Info_UEnum_StateOfCharacterCPP.OuterSingleton;
+	}
+	template<> GAMEFPS_CPP_API UEnum* StaticEnum<StateOfCharacterCPP>()
+	{
+		return StateOfCharacterCPP_StaticEnum();
+	}
+	struct Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics
+	{
+		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FEnumParams EnumParams;
+	};
+	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::Enumerators[] = {
+		{ "StateOfCharacterCPP::Idle", (int64)StateOfCharacterCPP::Idle },
+		{ "StateOfCharacterCPP::Aiming", (int64)StateOfCharacterCPP::Aiming },
+		{ "StateOfCharacterCPP::Reloading", (int64)StateOfCharacterCPP::Reloading },
+		{ "StateOfCharacterCPP::Swapping", (int64)StateOfCharacterCPP::Swapping },
+		{ "StateOfCharacterCPP::Running", (int64)StateOfCharacterCPP::Running },
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::Enum_MetaDataParams[] = {
+		{ "Aiming.Name", "StateOfCharacterCPP::Aiming" },
+		{ "BlueprintType", "true" },
+		{ "Idle.Name", "StateOfCharacterCPP::Idle" },
+		{ "ModuleRelativePath", "Private/Gameplay/ShooterCharacter.h" },
+		{ "Reloading.Name", "StateOfCharacterCPP::Reloading" },
+		{ "Running.Name", "StateOfCharacterCPP::Running" },
+		{ "Swapping.Name", "StateOfCharacterCPP::Swapping" },
+	};
+#endif
+	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::EnumParams = {
+		(UObject*(*)())Z_Construct_UPackage__Script_GameFPS_CPP,
+		nullptr,
+		"StateOfCharacterCPP",
+		"StateOfCharacterCPP",
+		Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::Enumerators,
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		UE_ARRAY_COUNT(Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::Enumerators),
+		EEnumFlags::None,
+		(uint8)UEnum::ECppForm::EnumClass,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::Enum_MetaDataParams), Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::Enum_MetaDataParams)
+	};
+	UEnum* Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP()
+	{
+		if (!Z_Registration_Info_UEnum_StateOfCharacterCPP.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_StateOfCharacterCPP.InnerSingleton, Z_Construct_UEnum_GameFPS_CPP_StateOfCharacterCPP_Statics::EnumParams);
+		}
+		return Z_Registration_Info_UEnum_StateOfCharacterCPP.InnerSingleton;
+	}
 	void AShooterCharacter::StaticRegisterNativesAShooterCharacter()
 	{
 	}
@@ -168,13 +228,17 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 	AShooterCharacter::~AShooterCharacter() {}
 	struct Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics
 	{
+		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
+	};
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo[] = {
+		{ StateOfCharacterCPP_StaticEnum, TEXT("StateOfCharacterCPP"), &Z_Registration_Info_UEnum_StateOfCharacterCPP, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1638034500U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 3892543406U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_3312183297(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_2456702927(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
-		nullptr, 0);
+		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

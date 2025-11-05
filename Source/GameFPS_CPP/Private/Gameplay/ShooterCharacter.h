@@ -7,6 +7,16 @@
 #include <Camera/CameraComponent.h>
 #include "ShooterCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class StateOfCharacterCPP : uint8
+{
+	Idle,
+	Aiming,
+	Reloading,
+	Swapping,
+	Running,
+};
+
 UCLASS()
 class AShooterCharacter : public ACharacter
 {
