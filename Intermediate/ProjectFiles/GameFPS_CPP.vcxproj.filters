@@ -132,5 +132,6 @@
     <ClInclude Include="..\..\Source\GameFPS_CPP\Private\Widget\ShooterResultWidget.h">
       <Filter>Source\GameFPS_CPP\Private\Widget</Filter>
     </ClInclude>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
