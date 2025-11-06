@@ -41,6 +41,12 @@ protected:
 	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadWrite)
 	StateOfCharacterCPP StateCPP;
 
+	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadWrite)
+	bool IsRunPressedCPP;
+
+	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadWrite)
+	float MoveForwardValueCPP;
+
 private:
 
 	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
