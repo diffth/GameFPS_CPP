@@ -47,6 +47,13 @@ protected:
 	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadWrite)
 	float MoveForwardValueCPP;
 
+	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadWrite)
+	TObjectPtr<USoundBase> FootstepLeftSoundCPP;
+
+	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadWrite)
+	TObjectPtr<USoundBase> FootstepRightSoundCPP;
+
+
 private:
 
 	UPROPERTY(Category = Character, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
