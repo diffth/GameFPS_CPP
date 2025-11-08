@@ -39,7 +39,7 @@ AShooterCharacter::AShooterCharacter()
 	}
 }
 
-float AShooterCharacter::GetSpeed() const
+float AShooterCharacter::GetSpeedCPP() const
 {
 	return GetVelocity().Length();
 }

@@ -27,7 +27,7 @@ public:
 	AShooterCharacter();
 
 	UFUNCTION(BlueprintCallable)
-	virtual float GetSpeed() const;
+	virtual float GetSpeedCPP() const;
 
 protected:
 	// Called when the game starts or when spawned
