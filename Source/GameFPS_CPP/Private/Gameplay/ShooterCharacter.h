@@ -25,6 +25,9 @@ class AShooterCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AShooterCharacter();
+	
+	UFUNCTION(BlueprintCallable)
+	virtual bool CanRunCPP() const;
 
 	UFUNCTION(BlueprintCallable)
 	virtual float GetSpeedCPP() const;

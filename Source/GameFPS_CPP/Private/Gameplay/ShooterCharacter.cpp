@@ -39,6 +39,11 @@ AShooterCharacter::AShooterCharacter()
 	}
 }
 
+bool AShooterCharacter::CanRunCPP() const
+{
+	return (MoveForwardValueCPP > 0.0) && IsRunPressedCPP;
+}
+
 float AShooterCharacter::GetSpeedCPP() const
 {
 	return GetVelocity().Length();

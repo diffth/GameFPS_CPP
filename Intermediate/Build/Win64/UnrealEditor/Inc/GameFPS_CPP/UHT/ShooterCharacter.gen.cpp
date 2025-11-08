@@ -78,24 +78,71 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 		}
 		return Z_Registration_Info_UEnum_StateOfCharacterCPP.InnerSingleton;
 	}
-	DEFINE_FUNCTION(AShooterCharacter::execGetSpeed)
+	DEFINE_FUNCTION(AShooterCharacter::execGetSpeedCPP)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(float*)Z_Param__Result=P_THIS->GetSpeed();
+		*(float*)Z_Param__Result=P_THIS->GetSpeedCPP();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AShooterCharacter::execCanRunCPP)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->CanRunCPP();
 		P_NATIVE_END;
 	}
 	void AShooterCharacter::StaticRegisterNativesAShooterCharacter()
 	{
 		UClass* Class = AShooterCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetSpeed", &AShooterCharacter::execGetSpeed },
+			{ "CanRunCPP", &AShooterCharacter::execCanRunCPP },
+			{ "GetSpeedCPP", &AShooterCharacter::execGetSpeedCPP },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics
+	struct Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics
 	{
-		struct ShooterCharacter_eventGetSpeed_Parms
+		struct ShooterCharacter_eventCanRunCPP_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((ShooterCharacter_eventCanRunCPP_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ShooterCharacter_eventCanRunCPP_Parms), &Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Gameplay/ShooterCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "CanRunCPP", nullptr, nullptr, Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::ShooterCharacter_eventCanRunCPP_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::ShooterCharacter_eventCanRunCPP_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AShooterCharacter_CanRunCPP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_CanRunCPP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics
+	{
+		struct ShooterCharacter_eventGetSpeedCPP_Parms
 		{
 			float ReturnValue;
 		};
@@ -106,24 +153,24 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterCharacter_eventGetSpeed_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::NewProp_ReturnValue,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterCharacter_eventGetSpeedCPP_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Private/Gameplay/ShooterCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "GetSpeed", nullptr, nullptr, Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::ShooterCharacter_eventGetSpeed_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::ShooterCharacter_eventGetSpeed_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_AShooterCharacter_GetSpeed()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "GetSpeedCPP", nullptr, nullptr, Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::ShooterCharacter_eventGetSpeedCPP_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::ShooterCharacter_eventGetSpeedCPP_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_GetSpeed_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -195,7 +242,8 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AShooterCharacter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AShooterCharacter_GetSpeed, "GetSpeed" }, // 2075093971
+		{ &Z_Construct_UFunction_AShooterCharacter_CanRunCPP, "CanRunCPP" }, // 549376417
+		{ &Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP, "GetSpeedCPP" }, // 3978938494
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -355,9 +403,9 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 		{ StateOfCharacterCPP_StaticEnum, TEXT("StateOfCharacterCPP"), &Z_Registration_Info_UEnum_StateOfCharacterCPP, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1638034500U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 3875462815U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 1986550246U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_1841860711(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_3229171197(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo));

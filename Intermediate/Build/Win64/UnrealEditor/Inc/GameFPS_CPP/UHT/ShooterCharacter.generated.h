@@ -19,7 +19,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_23_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetSpeed);
+	DECLARE_FUNCTION(execGetSpeedCPP); \
+	DECLARE_FUNCTION(execCanRunCPP);
 
 
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_23_ACCESSORS
