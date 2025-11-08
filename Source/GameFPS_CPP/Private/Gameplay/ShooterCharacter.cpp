@@ -39,6 +39,11 @@ AShooterCharacter::AShooterCharacter()
 	}
 }
 
+float AShooterCharacter::GetSpeed() const
+{
+	return GetVelocity().Length();
+}
+
 // Called when the game starts or when spawned
 void AShooterCharacter::BeginPlay()
 {
