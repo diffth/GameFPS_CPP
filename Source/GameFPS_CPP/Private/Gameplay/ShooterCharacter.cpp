@@ -3,6 +3,7 @@
 #include "Gameplay/ShooterCharacter.h"
 #include <GameFramework/CharacterMovementComponent.h>
 #include <Kismet/GameplayStatics.h>
+#include <EnhancedInputComponent.h>
 
 // Sets default values
 AShooterCharacter::AShooterCharacter()
@@ -91,7 +92,7 @@ void AShooterCharacter::BeginPlay()
 
 void AShooterCharacter::OnTriggerRun(const FInputActionValue& value)
 {
-
+	IsRunPressedCPP = value.Get<bool>();
 }
 
 // Called every frame
@@ -106,4 +107,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent)) {
+		EnhancedInputComponent->BindAction(RunInputAction, ETriggerEvent::Triggered, this, &AShooterCharacter::OnTriggerRun);
+	}
 }
