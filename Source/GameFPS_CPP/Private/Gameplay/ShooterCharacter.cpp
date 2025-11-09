@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Gameplay/ShooterCharacter.h"
+#include <GameFramework/CharacterMovementComponent.h>
 
 // Sets default values
 AShooterCharacter::AShooterCharacter()
@@ -52,7 +53,7 @@ void AShooterCharacter::TickRunCPP()
 		{
 		case StateOfCharacterCPP::Idle:
 			StateCPP = StateOfCharacterCPP::Running;
-			break;
+			GetCharacterMovement()->MaxWalkSpeed *= 2.0;
 		}
 	}
 	else
@@ -61,7 +62,7 @@ void AShooterCharacter::TickRunCPP()
 		{
 		case StateOfCharacterCPP::Running:
 			StateCPP = StateOfCharacterCPP::Idle;
-			break;
+			GetCharacterMovement()->MaxWalkSpeed *= 0.5;
 		}
 	}
 }
