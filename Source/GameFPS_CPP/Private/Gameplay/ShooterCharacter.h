@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include <Camera/CameraComponent.h>
+#include <InputAction.h>
 #include "ShooterCharacter.generated.h"
 
 UENUM(BlueprintType)
@@ -68,6 +69,8 @@ protected:
 	UPROPERTY(Category = Character, EditAnywhere, BlueprintReadWrite)
 	TObjectPtr<USoundBase> FootstepRightSoundCPP;
 
+	UPROPERTY(Category = Character, EditAnywhere, BlueprintReadWrite)
+	TObjectPtr<UInputAction> RunInputAction;
 
 private:
 
