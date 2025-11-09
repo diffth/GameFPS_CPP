@@ -2,6 +2,7 @@
 
 #include "Gameplay/ShooterCharacter.h"
 #include <GameFramework/CharacterMovementComponent.h>
+#include <Kismet/GameplayStatics.h>
 
 // Sets default values
 AShooterCharacter::AShooterCharacter()
@@ -69,7 +70,7 @@ void AShooterCharacter::TickRunCPP()
 
 void AShooterCharacter::OnFootstepLeftCPP()
 {
-
+	UGameplayStatics::PlaySoundAtLocation(this, FootstepLeftSoundCPP, LowerBodyCPP->GetSocketLocation("foot_l"));
 }
 
 float AShooterCharacter::GetSpeedCPP() const
