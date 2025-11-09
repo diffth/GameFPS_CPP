@@ -67,6 +67,11 @@ void AShooterCharacter::TickRunCPP()
 	}
 }
 
+void AShooterCharacter::OnFootstepLeftCPP()
+{
+
+}
+
 float AShooterCharacter::GetSpeedCPP() const
 {
 	return GetVelocity().Length();

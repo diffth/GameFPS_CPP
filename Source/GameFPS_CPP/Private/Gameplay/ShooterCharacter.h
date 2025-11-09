@@ -33,6 +33,9 @@ public:
 	virtual void TickRunCPP();
 
 	UFUNCTION(BlueprintCallable)
+	virtual void OnFootstepLeftCPP();
+
+	UFUNCTION(BlueprintCallable)
 	virtual float GetSpeedCPP() const;
 
 protected:
