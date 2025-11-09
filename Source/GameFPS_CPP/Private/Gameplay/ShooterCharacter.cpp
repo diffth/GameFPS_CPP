@@ -89,6 +89,11 @@ void AShooterCharacter::BeginPlay()
 	Super::BeginPlay();
 }
 
+void AShooterCharacter::OnTriggerRun(const FInputActionValue& value)
+{
+
+}
+
 // Called every frame
 void AShooterCharacter::Tick(float DeltaTime)
 {
