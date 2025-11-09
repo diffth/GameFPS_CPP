@@ -44,6 +44,28 @@ bool AShooterCharacter::CanRunCPP() const
 	return (MoveForwardValueCPP > 0.0) && IsRunPressedCPP;
 }
 
+void AShooterCharacter::TickRunCPP()
+{
+	if (CanRunCPP())
+	{
+		switch (StateCPP)
+		{
+		case StateOfCharacterCPP::Idle:
+			StateCPP = StateOfCharacterCPP::Running;
+			break;
+		}
+	}
+	else
+	{
+		switch (StateCPP)
+		{
+		case StateOfCharacterCPP::Running:
+			StateCPP = StateOfCharacterCPP::Idle;
+			break;
+		}
+	}
+}
+
 float AShooterCharacter::GetSpeedCPP() const
 {
 	return GetVelocity().Length();

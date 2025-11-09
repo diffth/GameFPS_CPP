@@ -30,6 +30,9 @@ public:
 	virtual bool CanRunCPP() const;
 
 	UFUNCTION(BlueprintCallable)
+	virtual void TickRunCPP();
+
+	UFUNCTION(BlueprintCallable)
 	virtual float GetSpeedCPP() const;
 
 protected:

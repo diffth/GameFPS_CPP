@@ -85,6 +85,13 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 		*(float*)Z_Param__Result=P_THIS->GetSpeedCPP();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AShooterCharacter::execTickRunCPP)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TickRunCPP();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AShooterCharacter::execCanRunCPP)
 	{
 		P_FINISH;
@@ -98,6 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "CanRunCPP", &AShooterCharacter::execCanRunCPP },
 			{ "GetSpeedCPP", &AShooterCharacter::execGetSpeedCPP },
+			{ "TickRunCPP", &AShooterCharacter::execTickRunCPP },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -174,6 +182,28 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AShooterCharacter_TickRunCPP_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShooterCharacter_TickRunCPP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Gameplay/ShooterCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterCharacter_TickRunCPP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShooterCharacter, nullptr, "TickRunCPP", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterCharacter_TickRunCPP_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterCharacter_TickRunCPP_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AShooterCharacter_TickRunCPP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterCharacter_TickRunCPP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AShooterCharacter);
 	UClass* Z_Construct_UClass_AShooterCharacter_NoRegister()
 	{
@@ -244,6 +274,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AShooterCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AShooterCharacter_CanRunCPP, "CanRunCPP" }, // 549376417
 		{ &Z_Construct_UFunction_AShooterCharacter_GetSpeedCPP, "GetSpeedCPP" }, // 3978938494
+		{ &Z_Construct_UFunction_AShooterCharacter_TickRunCPP, "TickRunCPP" }, // 576935112
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -403,9 +434,9 @@ void EmptyLinkFunctionForGeneratedCodeShooterCharacter() {}
 		{ StateOfCharacterCPP_StaticEnum, TEXT("StateOfCharacterCPP"), &Z_Registration_Info_UEnum_StateOfCharacterCPP, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1638034500U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 1986550246U) },
+		{ Z_Construct_UClass_AShooterCharacter, AShooterCharacter::StaticClass, TEXT("AShooterCharacter"), &Z_Registration_Info_UClass_AShooterCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterCharacter), 1057839306U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_3229171197(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_3489997547(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterCharacter_h_Statics::EnumInfo));
