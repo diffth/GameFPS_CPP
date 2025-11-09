@@ -36,6 +36,9 @@ public:
 	virtual void OnFootstepLeftCPP();
 
 	UFUNCTION(BlueprintCallable)
+	virtual void OnFootstepRightCPP();
+
+	UFUNCTION(BlueprintCallable)
 	virtual float GetSpeedCPP() const;
 
 protected:

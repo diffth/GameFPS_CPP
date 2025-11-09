@@ -73,6 +73,11 @@ void AShooterCharacter::OnFootstepLeftCPP()
 	UGameplayStatics::PlaySoundAtLocation(this, FootstepLeftSoundCPP, LowerBodyCPP->GetSocketLocation("foot_l"));
 }
 
+void AShooterCharacter::OnFootstepRightCPP()
+{
+	UGameplayStatics::PlaySoundAtLocation(this, FootstepRightSoundCPP, LowerBodyCPP->GetSocketLocation("foot_r"));
+}
+
 float AShooterCharacter::GetSpeedCPP() const
 {
 	return GetVelocity().Length();
