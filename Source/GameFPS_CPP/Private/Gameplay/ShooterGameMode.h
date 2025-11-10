@@ -6,6 +6,8 @@
 #include "GameFramework/GameModeBase.h"
 #include "ShooterGameMode.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE(FShooterGameModeOnEndGame, AShooterGameMode, OnEndGameCPP);
+
 /**
  * 
  */
@@ -30,5 +32,6 @@ protected:
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
 	int32 RankingCPP;
 
-	OnEndGameCPP;
+	UPROPERTY(BlueprintAssignable)
+	FShooterGameModeOnEndGame OnEndGameCPP;
 };
