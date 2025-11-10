@@ -15,6 +15,10 @@ UCLASS()
 class AShooterGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void UpdateRankingCPP();
 	
 protected:
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
@@ -31,6 +35,9 @@ protected:
 
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
 	int32 RankingCPP;
+
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	float ScoreCPP;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
 	FShooterGameModeOnEndGame OnEndGameCPP;

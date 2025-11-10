@@ -3,3 +3,10 @@
 
 #include "Gameplay/ShooterGameMode.h"
 
+void AShooterGameMode::UpdateRankingCPP()
+{
+	for (int32 Index = 0; Index < RankingScoresCPP.Num(); ++Index)
+	{
+
+	}
+}
