@@ -14,4 +14,21 @@ class AShooterGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+protected:
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	FDateTime StartTimeCPP;
+
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	FDateTime EndTimeCPP;
+
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	TArray<float> RankingScoresCPP;
+
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> RankingTimesCPP;
+
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	int32 RankingCPP;
+
+	OnEndGameCPP;
 };
