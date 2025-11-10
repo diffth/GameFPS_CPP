@@ -32,6 +32,6 @@ protected:
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
 	int32 RankingCPP;
 
-	UPROPERTY(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
 	FShooterGameModeOnEndGame OnEndGameCPP;
 };
