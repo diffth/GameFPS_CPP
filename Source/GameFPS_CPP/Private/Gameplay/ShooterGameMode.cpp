@@ -21,4 +21,10 @@ void AShooterGameMode::UpdateRankingCPP()
 	RankingCPP = RankingIndex + 1;
 	RankingScoresCPP.Insert(ScoreCPP, RankingIndex);
 	RankingTimesCPP.Insert(EndTimeCPP.ToString(), RankingIndex);
+
+	if (RankingScoresCPP.Num() > 10)
+	{
+		RankingScoresCPP.RemoveAt(RankingScoresCPP.Num() - 1);
+		RankingTimesCPP.RemoveAt(RankingTimesCPP.Num() - 1);
+	}
 }
