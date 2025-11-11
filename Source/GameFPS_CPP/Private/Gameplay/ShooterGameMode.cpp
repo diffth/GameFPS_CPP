@@ -18,4 +18,7 @@ void AShooterGameMode::UpdateRankingCPP()
 			break;
 		}
 	}
+	RankingCPP = RankingIndex + 1;
+	RankingScoresCPP.Insert(ScoreCPP, RankingIndex);
+	RankingTimesCPP.Insert(EndTimeCPP.ToString(), RankingIndex);
 }
