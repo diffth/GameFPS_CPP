@@ -92,6 +92,10 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnEndGameCPP_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnEndGameCPP;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_StartTimeCPP_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_StartTimeCPP;
@@ -117,10 +121,6 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ScoreCPP_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_ScoreCPP;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnEndGameCPP_MetaData[];
-#endif
-		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnEndGameCPP;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -145,6 +145,12 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP_MetaData[] = {
+		{ "ModuleRelativePath", "Private/Gameplay/ShooterGameMode.h" },
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP = { "OnEndGameCPP", nullptr, (EPropertyFlags)0x0010100010080000, UECodeGen_Private::EPropertyGenFlags::SparseMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterGameMode, OnEndGameCPP), Z_Construct_USparseDelegateFunction_GameFPS_CPP_ShooterGameModeOnEndGame__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP_MetaData), Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP_MetaData) }; // 1772889947
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AShooterGameMode_Statics::NewProp_StartTimeCPP_MetaData[] = {
 		{ "Category", "GameMode" },
@@ -189,13 +195,8 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AShooterGameMode_Statics::NewProp_ScoreCPP = { "ScoreCPP", nullptr, (EPropertyFlags)0x0020080000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterGameMode, ScoreCPP), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGameMode_Statics::NewProp_ScoreCPP_MetaData), Z_Construct_UClass_AShooterGameMode_Statics::NewProp_ScoreCPP_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP_MetaData[] = {
-		{ "ModuleRelativePath", "Private/Gameplay/ShooterGameMode.h" },
-	};
-#endif
-	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP = { "OnEndGameCPP", nullptr, (EPropertyFlags)0x0020180010080000, UECodeGen_Private::EPropertyGenFlags::SparseMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterGameMode, OnEndGameCPP), Z_Construct_USparseDelegateFunction_GameFPS_CPP_ShooterGameModeOnEndGame__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP_MetaData), Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP_MetaData) }; // 1772889947
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterGameMode_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_StartTimeCPP,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_EndTimeCPP,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_RankingScoresCPP_Inner,
@@ -204,7 +205,6 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_RankingTimesCPP,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_RankingCPP,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_ScoreCPP,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGameMode_Statics::NewProp_OnEndGameCPP,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AShooterGameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AShooterGameMode>::IsAbstract,
@@ -245,9 +245,9 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterGameMode, AShooterGameMode::StaticClass, TEXT("AShooterGameMode"), &Z_Registration_Info_UClass_AShooterGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGameMode), 3741821219U) },
+		{ Z_Construct_UClass_AShooterGameMode, AShooterGameMode::StaticClass, TEXT("AShooterGameMode"), &Z_Registration_Info_UClass_AShooterGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGameMode), 2775050970U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_773741369(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_1319632483(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

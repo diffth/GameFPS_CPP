@@ -20,6 +20,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void UpdateRankingCPP();
 	
+public:
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FShooterGameModeOnEndGame OnEndGameCPP;
+
 protected:
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
 	FDateTime StartTimeCPP;
@@ -39,6 +43,4 @@ protected:
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
 	float ScoreCPP;
 
-	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-	FShooterGameModeOnEndGame OnEndGameCPP;
 };
