@@ -5,8 +5,17 @@
 
 void AShooterGameMode::UpdateRankingCPP()
 {
+	int32 RankingIndex = 0;
 	for (int32 Index = 0; Index < RankingScoresCPP.Num(); ++Index)
 	{
-
+		float Element = RankingScoresCPP[Index];
+		if (Element >= ScoreCPP)
+		{
+			RankingIndex++;
+		}
+		else
+		{
+			break;
+		}
 	}
 }
