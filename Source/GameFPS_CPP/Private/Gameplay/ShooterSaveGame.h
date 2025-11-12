@@ -14,4 +14,10 @@ class UShooterSaveGame : public USaveGame
 {
 	GENERATED_BODY()
 	
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<float> ScoresCPP;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> TimesCPP;
 };
