@@ -17,5 +17,8 @@ class AShooterPlayerController : public APlayerController
 protected:
 	virtual void BeginPlay() override;
 
-	
+protected:
+	UPROPERTY(Category = Character, EditAnywhere, BlueprintReadWrite)
+	TObjectPtr<UInputMappingContext> ShooterInputMappingContext;
+
 };
