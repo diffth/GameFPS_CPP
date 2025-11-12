@@ -13,5 +13,9 @@ UCLASS()
 class AShooterPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+protected:
+	virtual void BeginPlay() override;
+
 	
 };
