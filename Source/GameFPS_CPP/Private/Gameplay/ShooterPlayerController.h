@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include <Widget/ShooterGameplayWidget.h>
 #include "ShooterPlayerController.generated.h"
 
 /**
@@ -18,7 +19,9 @@ protected:
 	virtual void BeginPlay() override;
 
 protected:
-	UPROPERTY(Category = Character, EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TObjectPtr<UInputMappingContext> ShooterInputMappingContext;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TObjectPtr<UShooterGameplayWidget> GameplayWidget;
 };
