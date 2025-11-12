@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include <Widget/ShooterGameplayWidget.h>
+#include <InputMappingContext.h>
 #include "ShooterPlayerController.generated.h"
 
 /**
