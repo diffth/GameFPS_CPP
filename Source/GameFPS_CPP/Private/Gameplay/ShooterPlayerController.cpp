@@ -15,5 +15,9 @@ void AShooterPlayerController::BeginPlay()
 	}
 
 	UUserWidget* Widget = CreateWidget(this, GameplayWidget);
+	if (Widget)
+	{
+		Widget->AddToViewport();
+	}
 }
    
