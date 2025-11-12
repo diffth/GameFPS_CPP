@@ -2,6 +2,17 @@
 
 #include "Gameplay/ShooterPlayerController.h"
 #include <EnhancedInputSubsystems.h>
+#include <Kismet/GameplayStatics.h>
+#include "ShooterGameMode.h"
+
+void AShooterPlayerController::OnEndGameCPP()
+{
+	UUserWidget* Widget = CreateWidget(this, ResultWidget);
+	if (Widget)
+	{
+		Widget->AddToViewport();
+	}
+}
 
 void AShooterPlayerController::BeginPlay()
 {
@@ -18,6 +29,12 @@ void AShooterPlayerController::BeginPlay()
 	if (Widget)
 	{
 		Widget->AddToViewport();
+	}
+
+	AShooterGameMode* GameMode = Cast<AShooterGameMode>(UGameplayStatics::GetGameMode(this));
+	if (GameMode)
+	{
+		GameMode->OnEndGameCPP.AddUniqueDynamic(this, &AShooterPlayerController::OnEndGameCPP);
 	}
 }
    

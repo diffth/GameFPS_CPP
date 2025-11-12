@@ -15,6 +15,10 @@ class AShooterPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
+public:
+	UFUNCTION()
+	void OnEndGameCPP();
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -24,4 +28,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UUserWidget> GameplayWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<UUserWidget> ResultWidget;
 };
