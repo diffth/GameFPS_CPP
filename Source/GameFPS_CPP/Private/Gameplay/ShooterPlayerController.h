@@ -23,5 +23,5 @@ protected:
 	TObjectPtr<UInputMappingContext> ShooterInputMappingContext;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TObjectPtr<UShooterGameplayWidget> GameplayWidget;
+	TSubclassOf<UUserWidget> GameplayWidget;
 };

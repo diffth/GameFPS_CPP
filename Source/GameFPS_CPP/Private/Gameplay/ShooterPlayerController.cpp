@@ -13,4 +13,7 @@ void AShooterPlayerController::BeginPlay()
 	{
 		Subsystem->AddMappingContext(ShooterInputMappingContext, 0);
 	}
+
+	UUserWidget* Widget = CreateWidget(this, GameplayWidget);
 }
+   
