@@ -11,6 +11,6 @@ void AShooterPlayerController::BeginPlay()
 
 	if (Subsystem)
 	{
-		Subsystem->AddMappingContext();
+		Subsystem->AddMappingContext(ShooterInputMappingContext, 0);
 	}
 }
