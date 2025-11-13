@@ -9,6 +9,11 @@ AShooterBullet::AShooterBullet()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	BulletCPP = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BulletCPP"));
+	if (BulletCPP)
+	{
+		RootComponent = BulletCPP;
+	}
 }
 
 // Called when the game starts or when spawned
@@ -25,3 +30,4 @@ void AShooterBullet::Tick(float DeltaTime)
 
 }
 
+ 
