@@ -23,7 +23,7 @@ void AShooterBullet::BeginPlay()
 	
 	if (BulletCPP)
 	{
-
+		BulletCPP->OnComponentHit.AddUniqueDynamic(this, &AShooterBullet::OnCompHitCall);
 	}
 }
 
