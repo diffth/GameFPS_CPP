@@ -21,6 +21,15 @@ void AShooterBullet::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if (BulletCPP)
+	{
+
+	}
+}
+
+void AShooterBullet::OnCompHitCall(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalInpulse, const FHitResult& Hit)
+{
+	Destroy();
 }
 
 // Called every frame
