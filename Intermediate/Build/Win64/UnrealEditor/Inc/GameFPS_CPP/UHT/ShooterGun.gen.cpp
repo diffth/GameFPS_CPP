@@ -19,6 +19,13 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 	GAMEFPS_CPP_API UClass* Z_Construct_UClass_AShooterGun_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_GameFPS_CPP();
 // End Cross Module References
+	DEFINE_FUNCTION(AShooterGun::execFireReleaseCPP)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->FireReleaseCPP();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AShooterGun::execRegisterNextFireCPP)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Duration);
@@ -41,6 +48,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 		UClass* Class = AShooterGun::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "FireBulletCPP", &AShooterGun::execFireBulletCPP },
+			{ "FireReleaseCPP", &AShooterGun::execFireReleaseCPP },
 			{ "RegisterNextFireCPP", &AShooterGun::execRegisterNextFireCPP },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -80,6 +88,28 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterGun_FireBulletCPP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AShooterGun_FireReleaseCPP_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShooterGun_FireReleaseCPP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Gun/ShooterGun.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterGun_FireReleaseCPP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShooterGun, nullptr, "FireReleaseCPP", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGun_FireReleaseCPP_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterGun_FireReleaseCPP_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AShooterGun_FireReleaseCPP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterGun_FireReleaseCPP_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -137,6 +167,11 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TimerFireCPP_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_TimerFireCPP;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_IsFirePressedCPP_MetaData[];
+#endif
+		static void NewProp_IsFirePressedCPP_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_IsFirePressedCPP;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -148,6 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGun_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AShooterGun_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AShooterGun_FireBulletCPP, "FireBulletCPP" }, // 1560838805
+		{ &Z_Construct_UFunction_AShooterGun_FireReleaseCPP, "FireReleaseCPP" }, // 1515133642
 		{ &Z_Construct_UFunction_AShooterGun_RegisterNextFireCPP, "RegisterNextFireCPP" }, // 2969959158
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGun_Statics::FuncInfo) < 2048);
@@ -170,10 +206,22 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 		{ "ModuleRelativePath", "Private/Gun/ShooterGun.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP = { "TimerFireCPP", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterGun, TimerFireCPP), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP_MetaData), Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP_MetaData) }; // 3999327403
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP = { "TimerFireCPP", nullptr, (EPropertyFlags)0x0020080000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterGun, TimerFireCPP), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP_MetaData), Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP_MetaData) }; // 3999327403
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP_MetaData[] = {
+		{ "Category", "ShooterGun" },
+		{ "ModuleRelativePath", "Private/Gun/ShooterGun.h" },
+	};
+#endif
+	void Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP_SetBit(void* Obj)
+	{
+		((AShooterGun*)Obj)->IsFirePressedCPP = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP = { "IsFirePressedCPP", nullptr, (EPropertyFlags)0x0020080000020005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AShooterGun), &Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP_MetaData), Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterGun_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGun_Statics::NewProp_BulletSpeedCPP,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGun_Statics::NewProp_TimerFireCPP,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterGun_Statics::NewProp_IsFirePressedCPP,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AShooterGun_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AShooterGun>::IsAbstract,
@@ -213,9 +261,9 @@ void EmptyLinkFunctionForGeneratedCodeShooterGun() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterGun, AShooterGun::StaticClass, TEXT("AShooterGun"), &Z_Registration_Info_UClass_AShooterGun, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGun), 3163767899U) },
+		{ Z_Construct_UClass_AShooterGun, AShooterGun::StaticClass, TEXT("AShooterGun"), &Z_Registration_Info_UClass_AShooterGun, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGun), 1139068549U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_3352797793(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_506378443(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
