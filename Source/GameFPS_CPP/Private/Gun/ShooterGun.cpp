@@ -3,6 +3,7 @@
 
 #include "Gun/ShooterGun.h"
 #include "ShooterBullet.h"
+#include <Kismet/KismetSystemLibrary.h>
 
 // Sets default values
 AShooterGun::AShooterGun()
@@ -20,6 +21,11 @@ void AShooterGun::FireBulletCPP(UClass* BulletClass, FTransform Transform)
 	{
 		Bullet->SetSpeedCPP(BulletSpeedCPP);
 	}
+}
+
+void AShooterGun::RegisterNextFireCPP(float Duration)
+{
+	TimerFireCPP = UKismetSystemLibrary::K2_SetTimer(this, TEXT("Fire"), Duration, false);
 }
 
 // Called when the game starts or when spawned

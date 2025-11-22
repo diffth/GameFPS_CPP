@@ -18,6 +18,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void FireBulletCPP(UClass* BulletClass, FTransform Transform);
 
+	UFUNCTION(BlueprintCallable)
+	void RegisterNextFireCPP(float Duration);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -30,4 +33,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float BulletSpeedCPP;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	FTimerHandle TimerFireCPP;
+	   
 };
