@@ -15,6 +15,9 @@ public:
 	// Sets default values for this actor's properties
 	AShooterGun();
 
+	UFUNCTION(BlueprintCallable)
+	void FireBulletCPP(UClass* BulletClass, FTransform Transform);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

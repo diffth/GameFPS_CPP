@@ -11,6 +11,11 @@ AShooterGun::AShooterGun()
 
 }
 
+void AShooterGun::FireBulletCPP(UClass* BulletClass, FTransform Transform)
+{
+	GetWorld()->SpawnActor(BulletClass, Transform);
+}
+
 // Called when the game starts or when spawned
 void AShooterGun::BeginPlay()
 {
