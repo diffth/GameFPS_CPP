@@ -16,7 +16,7 @@ public:
 	AShooterBullet();
 
 	UFUNCTION(BlueprintCallable)
-	void SetSpeed(float value);
+	void SetSpeedCPP(float Value);
 
 protected:
 	// Called when the game starts or when spawned
@@ -28,6 +28,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float SpeedCPP;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))

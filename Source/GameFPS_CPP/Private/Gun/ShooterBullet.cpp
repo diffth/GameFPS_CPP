@@ -16,9 +16,9 @@ AShooterBullet::AShooterBullet()
 	}
 }
 
-void AShooterBullet::SetSpeed()
+void AShooterBullet::SetSpeedCPP(float Value)
 {
-
+	SpeedCPP = Value;
 }
 
 // Called when the game starts or when spawned
