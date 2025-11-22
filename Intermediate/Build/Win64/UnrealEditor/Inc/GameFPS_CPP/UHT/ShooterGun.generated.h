@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
 #ifdef GAMEFPS_CPP_ShooterGun_generated_h
 #error "ShooterGun.generated.h already included, missing '#pragma once' in ShooterGun.h"
 #endif
@@ -17,7 +18,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_SPARSE_DATA
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execFireBulletCPP);
+
+
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_ACCESSORS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterGun_h_12_INCLASS_NO_PURE_DECLS \
 private: \
