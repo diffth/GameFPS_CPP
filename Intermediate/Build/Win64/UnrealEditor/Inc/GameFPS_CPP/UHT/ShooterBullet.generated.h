@@ -22,7 +22,8 @@ struct FHitResult;
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterBullet_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterBullet_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnCompHitCall);
+	DECLARE_FUNCTION(execOnCompHitCall); \
+	DECLARE_FUNCTION(execSetSpeed);
 
 
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gun_ShooterBullet_h_12_ACCESSORS
