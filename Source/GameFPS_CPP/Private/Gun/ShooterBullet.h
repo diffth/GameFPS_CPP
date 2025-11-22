@@ -15,6 +15,9 @@ public:
 	// Sets default values for this actor's properties
 	AShooterBullet();
 
+	UFUNCTION(BlueprintCallable)
+	void SetSpeed(float value);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

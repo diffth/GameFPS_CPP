@@ -16,6 +16,11 @@ AShooterBullet::AShooterBullet()
 	}
 }
 
+void AShooterBullet::SetSpeed()
+{
+
+}
+
 // Called when the game starts or when spawned
 void AShooterBullet::BeginPlay()
 {
