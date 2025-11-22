@@ -18,7 +18,7 @@ void AShooterGun::FireBulletCPP(UClass* BulletClass, FTransform Transform)
 
 	if (Bullet)
 	{
-
+		Bullet->SetSpeedCPP(BulletSpeedCPP);
 	}
 }
 
