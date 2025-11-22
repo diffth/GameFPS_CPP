@@ -21,6 +21,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RegisterNextFireCPP(float Duration);
 
+	UFUNCTION(BlueprintCallable)
+	void FireReleaseCPP();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -35,5 +38,8 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	FTimerHandle TimerFireCPP;
-	   
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	bool IsFirePressedCPP;
+
 };

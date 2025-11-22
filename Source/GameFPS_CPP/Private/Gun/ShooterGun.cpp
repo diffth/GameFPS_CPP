@@ -28,6 +28,12 @@ void AShooterGun::RegisterNextFireCPP(float Duration)
 	TimerFireCPP = UKismetSystemLibrary::K2_SetTimer(this, TEXT("Fire"), Duration, false);
 }
 
+void AShooterGun::FireReleaseCPP()
+{
+	IsFirePressedCPP = false;
+	GetWorld()->GetTimerManager().ClearTimer(TimerFireCPP);
+}
+
 // Called when the game starts or when spawned
 void AShooterGun::BeginPlay()
 {
