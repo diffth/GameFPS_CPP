@@ -24,6 +24,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void FireReleaseCPP();
 
+	UFUNCTION(BlueprintCallable)
+	bool IsFiringCPP() const;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

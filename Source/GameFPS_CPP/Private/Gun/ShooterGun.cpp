@@ -34,6 +34,11 @@ void AShooterGun::FireReleaseCPP()
 	GetWorld()->GetTimerManager().ClearTimer(TimerFireCPP);
 }
 
+bool AShooterGun::IsFiringCPP() const
+{
+	return IsFirePressedCPP && GetWorld()->GetTimerManager().IsTimerActive(TimerFireCPP);
+}
+
 // Called when the game starts or when spawned
 void AShooterGun::BeginPlay()
 {
