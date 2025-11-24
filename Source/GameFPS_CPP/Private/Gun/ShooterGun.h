@@ -27,6 +27,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsFiringCPP() const;
 
+	UFUNCTION(BlueprintCallable)
+	void MakeRecoilCPP();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

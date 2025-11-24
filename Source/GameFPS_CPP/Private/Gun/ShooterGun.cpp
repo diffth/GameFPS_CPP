@@ -4,6 +4,8 @@
 #include "Gun/ShooterGun.h"
 #include "ShooterBullet.h"
 #include <Kismet/KismetSystemLibrary.h>
+#include <Kismet/GameplayStatics.h>
+#include <Gameplay/ShooterCharacter.h>
 
 // Sets default values
 AShooterGun::AShooterGun()
@@ -37,6 +39,19 @@ void AShooterGun::FireReleaseCPP()
 bool AShooterGun::IsFiringCPP() const
 {
 	return IsFirePressedCPP && GetWorld()->GetTimerManager().IsTimerActive(TimerFireCPP);
+}
+
+void AShooterGun::MakeRecoilCPP()
+{
+	AShooterCharacter* Character = Cast<AShooterCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));
+	if (Character)
+	{
+		float Pitch = FMath::FRandRange(-0.15, -0.05);
+		Character->AddControllerPitchInput(Pitch);
+		 
+		float Yaw = FMath::FRandRange(0.05, 0.15);
+		Character->AddControllerYawInput(Yaw);
+	}
 }
 
 // Called when the game starts or when spawned
