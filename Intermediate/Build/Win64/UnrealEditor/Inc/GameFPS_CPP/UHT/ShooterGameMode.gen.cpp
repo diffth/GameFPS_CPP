@@ -98,6 +98,13 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		}
 		return Z_Registration_Info_UEnum_StateOfGameCPP.InnerSingleton;
 	}
+	DEFINE_FUNCTION(AShooterGameMode::execGetStartTimeCPP)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FDateTime*)Z_Param__Result=P_THIS->GetStartTimeCPP();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AShooterGameMode::execGetStateCPP)
 	{
 		P_FINISH;
@@ -116,10 +123,45 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 	{
 		UClass* Class = AShooterGameMode::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetStartTimeCPP", &AShooterGameMode::execGetStartTimeCPP },
 			{ "GetStateCPP", &AShooterGameMode::execGetStateCPP },
 			{ "UpdateRankingCPP", &AShooterGameMode::execUpdateRankingCPP },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics
+	{
+		struct ShooterGameMode_eventGetStartTimeCPP_Parms
+		{
+			FDateTime ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShooterGameMode_eventGetStartTimeCPP_Parms, ReturnValue), Z_Construct_UScriptStruct_FDateTime, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Gameplay/ShooterGameMode.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShooterGameMode, nullptr, "GetStartTimeCPP", nullptr, nullptr, Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::PropPointers), sizeof(Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::ShooterGameMode_eventGetStartTimeCPP_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::ShooterGameMode_eventGetStartTimeCPP_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AShooterGameMode_GetStateCPP_Statics
 	{
@@ -237,6 +279,7 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterGameMode_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AShooterGameMode_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AShooterGameMode_GetStartTimeCPP, "GetStartTimeCPP" }, // 3907107626
 		{ &Z_Construct_UFunction_AShooterGameMode_GetStateCPP, "GetStateCPP" }, // 4020000867
 		{ &Z_Construct_UFunction_AShooterGameMode_UpdateRankingCPP, "UpdateRankingCPP" }, // 1057891345
 	};
@@ -366,9 +409,9 @@ void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastScriptDelegate& S
 		{ StateOfGameCPP_StaticEnum, TEXT("StateOfGameCPP"), &Z_Registration_Info_UEnum_StateOfGameCPP, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3222178229U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterGameMode, AShooterGameMode::StaticClass, TEXT("AShooterGameMode"), &Z_Registration_Info_UClass_AShooterGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGameMode), 2289455825U) },
+		{ Z_Construct_UClass_AShooterGameMode, AShooterGameMode::StaticClass, TEXT("AShooterGameMode"), &Z_Registration_Info_UClass_AShooterGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterGameMode), 1321260587U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_1259423882(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_722100997(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_Statics::EnumInfo));

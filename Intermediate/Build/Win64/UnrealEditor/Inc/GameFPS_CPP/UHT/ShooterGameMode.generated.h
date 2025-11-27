@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 enum class StateOfGameCPP : uint8;
+struct FDateTime;
 #ifdef GAMEFPS_CPP_ShooterGameMode_generated_h
 #error "ShooterGameMode.generated.h already included, missing '#pragma once' in ShooterGameMode.h"
 #endif
@@ -24,6 +25,7 @@ GAMEFPS_CPP_API void FShooterGameModeOnEndGame_DelegateWrapper(const FMulticastS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_25_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Gameplay_ShooterGameMode_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetStartTimeCPP); \
 	DECLARE_FUNCTION(execGetStateCPP); \
 	DECLARE_FUNCTION(execUpdateRankingCPP);
 
