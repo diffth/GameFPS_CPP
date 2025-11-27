@@ -14,6 +14,10 @@ UCLASS()
 class UShooterGameplayWidget : public UUserWidget
 {
 	GENERATED_BODY()
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void TickTimeCPP();
 	
 protected:
 	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))

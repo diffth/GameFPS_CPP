@@ -3,3 +3,7 @@
 
 #include "Widget/ShooterGameplayWidget.h"
 
+void UShooterGameplayWidget::TickTimeCPP()
+{
+
+}
