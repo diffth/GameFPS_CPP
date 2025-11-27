@@ -33,3 +33,8 @@ StateOfGameCPP AShooterGameMode::GetStateCPP() const
 {
 	return StateCPP;
 }
+
+FDateTime AShooterGameMode::GetStartTimeCPP() const
+{
+	return StartTimeCPP;
+}

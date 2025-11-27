@@ -30,6 +30,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	StateOfGameCPP GetStateCPP() const;
+
+	UFUNCTION(BlueprintCallable)
+	FDateTime GetStartTimeCPP() const;
 	
 public:
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
