@@ -69,7 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextTime_MetaData[] = {
-		{ "BlueprintBaseOnly", "" },
+		{ "BindWidget", "" },
 		{ "Category", "ShooterGameplayWidget" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Widget/ShooterGameplayWidget.h" },
@@ -78,7 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextTime = { "TextTime", nullptr, (EPropertyFlags)0x002408000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UShooterGameplayWidget, TextTime), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextTime_MetaData), Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextTime_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextRemainingBullets_MetaData[] = {
-		{ "BlueprintBaseOnly", "" },
+		{ "BindWidget", "" },
 		{ "Category", "ShooterGameplayWidget" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Widget/ShooterGameplayWidget.h" },
@@ -87,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextRemainingBullets = { "TextRemainingBullets", nullptr, (EPropertyFlags)0x002408000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UShooterGameplayWidget, TextRemainingBullets), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextRemainingBullets_MetaData), Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextRemainingBullets_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextMaxRemainingBullets_MetaData[] = {
-		{ "BlueprintBaseOnly", "" },
+		{ "BindWidget", "" },
 		{ "Category", "ShooterGameplayWidget" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Widget/ShooterGameplayWidget.h" },
@@ -96,7 +96,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextMaxRemainingBullets = { "TextMaxRemainingBullets", nullptr, (EPropertyFlags)0x002408000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UShooterGameplayWidget, TextMaxRemainingBullets), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextMaxRemainingBullets_MetaData), Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextMaxRemainingBullets_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextWeaponName_MetaData[] = {
-		{ "BlueprintBaseOnly", "" },
+		{ "BindWidget", "" },
 		{ "Category", "ShooterGameplayWidget" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Widget/ShooterGameplayWidget.h" },
@@ -105,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextWeaponName = { "TextWeaponName", nullptr, (EPropertyFlags)0x002408000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UShooterGameplayWidget, TextWeaponName), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextWeaponName_MetaData), Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextWeaponName_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameplayWidget_Statics::NewProp_TextFireMode_MetaData[] = {
-		{ "BlueprintBaseOnly", "" },
+		{ "BindWidget", "" },
 		{ "Category", "ShooterGameplayWidget" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Private/Widget/ShooterGameplayWidget.h" },
@@ -158,9 +158,9 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UShooterGameplayWidget, UShooterGameplayWidget::StaticClass, TEXT("UShooterGameplayWidget"), &Z_Registration_Info_UClass_UShooterGameplayWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UShooterGameplayWidget), 46115791U) },
+		{ Z_Construct_UClass_UShooterGameplayWidget, UShooterGameplayWidget::StaticClass, TEXT("UShooterGameplayWidget"), &Z_Registration_Info_UClass_UShooterGameplayWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UShooterGameplayWidget), 433811347U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_3493864940(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_110917725(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
