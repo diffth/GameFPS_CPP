@@ -16,19 +16,19 @@ class UShooterGameplayWidget : public UUserWidget
 	GENERATED_BODY()
 	
 protected:
-	UPROPERTY(BlueprintReadOnly, meta=(BlueprintBaseOnly))
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 	TObjectPtr<UTextBlock> TextTime;
 
-	UPROPERTY(BlueprintReadOnly, meta=(BlueprintBaseOnly))
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 	TObjectPtr<UTextBlock> TextRemainingBullets;
 
-	UPROPERTY(BlueprintReadOnly, meta=(BlueprintBaseOnly))
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 	TObjectPtr<UTextBlock> TextMaxRemainingBullets;
 
-	UPROPERTY(BlueprintReadOnly, meta=(BlueprintBaseOnly))
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 	TObjectPtr<UTextBlock> TextWeaponName;
 
-	UPROPERTY(BlueprintReadOnly, meta=(BlueprintBaseOnly))
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 	TObjectPtr<UTextBlock> TextFireMode;
 
 };
