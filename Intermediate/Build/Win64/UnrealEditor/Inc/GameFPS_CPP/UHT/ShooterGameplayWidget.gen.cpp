@@ -15,8 +15,42 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_GameFPS_CPP();
 // End Cross Module References
+	DEFINE_FUNCTION(UShooterGameplayWidget::execTickTimeCPP)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TickTimeCPP();
+		P_NATIVE_END;
+	}
 	void UShooterGameplayWidget::StaticRegisterNativesUShooterGameplayWidget()
 	{
+		UClass* Class = UShooterGameplayWidget::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "TickTimeCPP", &UShooterGameplayWidget::execTickTimeCPP },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Private/Widget/ShooterGameplayWidget.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UShooterGameplayWidget, nullptr, "TickTimeCPP", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP_Statics::Function_MetaDataParams), Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UShooterGameplayWidget);
 	UClass* Z_Construct_UClass_UShooterGameplayWidget_NoRegister()
@@ -26,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 	struct Z_Construct_UClass_UShooterGameplayWidget_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -58,6 +93,10 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GameFPS_CPP,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_UShooterGameplayWidget_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UShooterGameplayWidget_TickTimeCPP, "TickTimeCPP" }, // 2308913728
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameplayWidget_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -127,11 +166,11 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UShooterGameplayWidget_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameplayWidget_Statics::PropPointers),
 		0,
 		0x00A010A0u,
@@ -158,9 +197,9 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameplayWidget() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UShooterGameplayWidget, UShooterGameplayWidget::StaticClass, TEXT("UShooterGameplayWidget"), &Z_Registration_Info_UClass_UShooterGameplayWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UShooterGameplayWidget), 433811347U) },
+		{ Z_Construct_UClass_UShooterGameplayWidget, UShooterGameplayWidget::StaticClass, TEXT("UShooterGameplayWidget"), &Z_Registration_Info_UClass_UShooterGameplayWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UShooterGameplayWidget), 3567999674U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_110917725(TEXT("/Script/GameFPS_CPP"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_249863958(TEXT("/Script/GameFPS_CPP"),
 		Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameFPS_CPP_Source_GameFPS_CPP_Private_Widget_ShooterGameplayWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
