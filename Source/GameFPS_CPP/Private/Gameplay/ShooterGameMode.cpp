@@ -28,3 +28,8 @@ void AShooterGameMode::UpdateRankingCPP()
 		RankingTimesCPP.RemoveAt(RankingTimesCPP.Num() - 1);
 	}
 }
+
+StateOfGameCPP AShooterGameMode::GetStateCPP() const
+{
+	return StateCPP;
+}

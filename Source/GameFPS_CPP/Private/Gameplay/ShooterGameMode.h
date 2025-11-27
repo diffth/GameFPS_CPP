@@ -8,6 +8,14 @@
 
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE(FShooterGameModeOnEndGame, AShooterGameMode, OnEndGameCPP);
 
+UENUM(BlueprintType)
+enum class StateOfGameCPP : uint8
+{
+	Ready,
+	Playing,
+	Ended,
+};
+
 /**
  * 
  */
@@ -19,6 +27,9 @@ class AShooterGameMode : public AGameModeBase
 public:
 	UFUNCTION(BlueprintCallable)
 	void UpdateRankingCPP();
+
+	UFUNCTION(BlueprintCallable)
+	StateOfGameCPP GetStateCPP() const;
 	
 public:
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
@@ -43,4 +54,6 @@ protected:
 	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
 	float ScoreCPP;
 
+	UPROPERTY(Category = GameMode, VisibleAnywhere, BlueprintReadWrite)
+	StateOfGameCPP StateCPP;
 };
